@@ -15,7 +15,7 @@ public class SynthesizerActivity extends AppCompatActivity {
     private Button mEButton;
     private MediaPlayer mpE;
     private MediaPlayer mpF;
-
+    //this text does not matter
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
