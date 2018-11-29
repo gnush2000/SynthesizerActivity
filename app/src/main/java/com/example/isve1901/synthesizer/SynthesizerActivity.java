@@ -11,8 +11,8 @@ import android.widget.Button;
 public class SynthesizerActivity extends AppCompatActivity {
     private static final String TAG =
             SynthesizerActivity.class.getName();
-    private Button button1;
-    private Button button2;
+    private Button eButton;
+    private Button mEButton;
     private MediaPlayer mpE;
     private MediaPlayer mpF;
 
@@ -21,21 +21,25 @@ public class SynthesizerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_synthesizer);
 
-        button1 = (Button)findViewById(R.id.button1);
-        button2 = (Button)findViewById(R.id.button2);
+        eButton = (Button)findViewById(R.id.eButton);
+        mEButton = (Button)findViewById(R.id.mEButton);
 
         mpE = MediaPlayer.create(this, R.raw.scalee);
         mpF = MediaPlayer.create(this, R.raw.scalef);
 
-        button1.setOnClickListener(new View.OnClickListener() {
+        mpE.seekTo(0);
+
+        eButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Log.i(TAG, "Button 1 Clicked");
 
                 mpE.start();
+
             }
         });
-        button2.setOnClickListener(new View.OnClickListener() {
+        mEButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                mpF.seekTo(0);
                 Log.i(TAG, "Button 1 Clicked");
             }
         });

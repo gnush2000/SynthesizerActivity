@@ -12,20 +12,20 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/eButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onButton1Click"
-            android:text="@string/button1"
+            android:text="@string/eButton"
             tools:layout_editor_absoluteX="5dp"
             tools:layout_editor_absoluteY="16dp" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/mEButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onButton2Click"
-            android:text="@string/button2"
+            android:text="@string/mEButton"
             tools:layout_editor_absoluteX="291dp"
             tools:layout_editor_absoluteY="16dp" />
 
