@@ -39,6 +39,7 @@ public class SynthesizerActivity extends AppCompatActivity {
                 Log.i(TAG, "Button 1 Clicked");
             }
         });
+        mpF.start();
 
     }
 }
