@@ -47,6 +47,14 @@
             tools:layout_editor_absoluteX="291dp"
             tools:layout_editor_absoluteY="16dp" />
 
+        <Button
+            android:id="@+id/CH1Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onButton5Click"
+            android:text="@string/CH1Button"
+            tools:layout_editor_absoluteX="291dp"
+            tools:layout_editor_absoluteY="16dp" />
 
     </LinearLayout>
 

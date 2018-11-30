@@ -9,16 +9,22 @@ import android.widget.Button;
 
 
 public class SynthesizerActivity extends AppCompatActivity {
+    private final int WHOLE_NOTE = 1000;
     private static final String TAG =
             SynthesizerActivity.class.getName();
     private Button eButton;
     private Button mEButton;
     private Button aButton;
     private Button bButton;
+    private Button CH1Button;
     private MediaPlayer mpE;
     private MediaPlayer mpF;
     private MediaPlayer mpA;
     private MediaPlayer mpB;
+    private MediaPlayer mpFS;
+    private MediaPlayer mpGS;
+    private MediaPlayer mpCS;
+    private MediaPlayer mpDS;
 
 
     //this text does not matter
@@ -31,13 +37,21 @@ public class SynthesizerActivity extends AppCompatActivity {
         mEButton = (Button)findViewById(R.id.mEButton);
         aButton = (Button)findViewById(R.id.aButton);
         bButton = (Button)findViewById(R.id.bButton);
+        CH1Button = ((Button)findViewById(R.id.CH1Button));
 
         mpE = MediaPlayer.create(this, R.raw.scalee);
         mpF = MediaPlayer.create(this, R.raw.scalef);
         mpA = MediaPlayer.create(this, R.raw.scalea);
         mpB = MediaPlayer.create(this, R.raw.scaleb);
+        mpFS = MediaPlayer.create(this, R.raw.scalefs);
 
-
+        private void delayPlaying(int delay) {
+            try {
+                Thread.sleep(delay);
+            } catch (InterruptedException e) {
+                Log.e("SynthesizerActivity","Audio playback interrupted");
+            }
+        }
 
         eButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -76,6 +90,13 @@ public class SynthesizerActivity extends AppCompatActivity {
             }
         });
 
+        CH1Button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Log.i(TAG, "CH1Button Clicked");
+                mpE.seekTo(0);
+                mpE.start();
+
+            }
 
     }
 }
