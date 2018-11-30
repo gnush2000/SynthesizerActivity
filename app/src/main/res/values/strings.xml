@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">Synthesizer</string>
     <string name ="eButton">eButton</string>
+    <string name="aButton">aButton</string>
+    <string name="bButton">bButton</string>
     <string name="mEButton">mEButton</string>
+
+
 </resources>

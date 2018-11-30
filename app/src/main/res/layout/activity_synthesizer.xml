@@ -29,6 +29,25 @@
             tools:layout_editor_absoluteX="291dp"
             tools:layout_editor_absoluteY="16dp" />
 
+        <Button
+            android:id="@+id/aButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onButton3Click"
+            android:text="@string/aButton"
+            tools:layout_editor_absoluteX="291dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <Button
+            android:id="@+id/bButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onButton4Click"
+            android:text="@string/bButton"
+            tools:layout_editor_absoluteX="291dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+
     </LinearLayout>
 
     <TextView
