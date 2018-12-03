@@ -44,13 +44,6 @@ public class SynthesizerActivity extends AppCompatActivity {
         mpB = MediaPlayer.create(this, R.raw.scaleb);
         mpFS = MediaPlayer.create(this, R.raw.scalefs);
 
-        private void delayPlaying(int delay){
-            try {
-                Thread.sleep(delay);
-            } catch (InterruptedException e) {
-                Log.e("SynthesizerActivity", "Audio playback interrupted");
-            }
-        }
 
         eButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -98,3 +91,11 @@ public class SynthesizerActivity extends AppCompatActivity {
             }
         });
     }
+    private void delayPlaying(int delay){
+        try {
+            Thread.sleep(delay);
+        } catch (InterruptedException e) {
+            Log.e("SynthesizerActivity", "Audio playback interrupted");
+        }
+    }
+}
