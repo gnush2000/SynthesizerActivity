@@ -26,18 +26,17 @@ public class SynthesizerActivity extends AppCompatActivity {
     private MediaPlayer mpCS;
     private MediaPlayer mpDS;
 
-
     //this text does not matter
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_synthesizer);
 
-        eButton = (Button)findViewById(R.id.eButton);
-        mEButton = (Button)findViewById(R.id.mEButton);
-        aButton = (Button)findViewById(R.id.aButton);
-        bButton = (Button)findViewById(R.id.bButton);
-        CH1Button = ((Button)findViewById(R.id.CH1Button));
+        eButton = (Button) findViewById(R.id.eButton);
+        mEButton = (Button) findViewById(R.id.mEButton);
+        aButton = (Button) findViewById(R.id.aButton);
+        bButton = (Button) findViewById(R.id.bButton);
+        CH1Button = ((Button) findViewById(R.id.CH1Button));
 
         mpE = MediaPlayer.create(this, R.raw.scalee);
         mpF = MediaPlayer.create(this, R.raw.scalef);
@@ -45,11 +44,11 @@ public class SynthesizerActivity extends AppCompatActivity {
         mpB = MediaPlayer.create(this, R.raw.scaleb);
         mpFS = MediaPlayer.create(this, R.raw.scalefs);
 
-        private void delayPlaying(int delay) {
+        private void delayPlaying(int delay){
             try {
                 Thread.sleep(delay);
             } catch (InterruptedException e) {
-                Log.e("SynthesizerActivity","Audio playback interrupted");
+                Log.e("SynthesizerActivity", "Audio playback interrupted");
             }
         }
 
@@ -97,6 +96,5 @@ public class SynthesizerActivity extends AppCompatActivity {
                 mpE.start();
 
             }
-
+        });
     }
-}
