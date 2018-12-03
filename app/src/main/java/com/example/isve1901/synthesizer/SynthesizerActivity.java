@@ -89,28 +89,54 @@ public class SynthesizerActivity extends AppCompatActivity {
         CH1Button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Log.i(TAG, "CH1Button Clicked");
-                //mpE.seekTo(0);
+                mpE.seekTo(0);
                 mpE.start();
                 delayPlaying (WHOLE_NOTE/2);
-                //mpFS.seekTo(0);
+                mpFS.seekTo(0);
                 mpFS.start();
                 delayPlaying (WHOLE_NOTE/2);
-                //mpGS.seekTo(0);
+                mpGS.seekTo(0);
                 mpGS.start();
                 delayPlaying (WHOLE_NOTE/2);
-               // mpA.seekTo(0);
+                mpA.seekTo(0);
                 mpA.start();
                 delayPlaying (WHOLE_NOTE/2);
-               // mpB.seekTo(0);
+                mpB.seekTo(0);
                 mpB.start();
                 delayPlaying (WHOLE_NOTE/2);
-                //mpCS.seekTo(0);
+                mpCS.seekTo(0);
                 mpCS.start();
                 delayPlaying (WHOLE_NOTE/2);
-                //mpDS.seekTo(0);
+                mpDS.seekTo(0);
                 mpDS.start();
                 delayPlaying (WHOLE_NOTE/2);
-                //mpE.seekTo(0);
+                mpE.seekTo(0);
+                mpE.start();
+
+                //Scale Backwards
+
+                mpE.seekTo(0);
+                mpE.start();
+                delayPlaying (WHOLE_NOTE/2);
+                mpDS.seekTo(0);
+                mpDS.start();
+                delayPlaying (WHOLE_NOTE/2);
+                mpCS.seekTo(0);
+                mpCS.start();
+                delayPlaying (WHOLE_NOTE/2);
+                mpB.seekTo(0);
+                mpB.start();
+                delayPlaying (WHOLE_NOTE/2);
+                mpA.seekTo(0);
+                mpA.start();
+                delayPlaying (WHOLE_NOTE/2);
+                mpGS.seekTo(0);
+                mpGS.start();
+                delayPlaying (WHOLE_NOTE/2);
+                mpFS.seekTo(0);
+                mpFS.start();
+                delayPlaying (WHOLE_NOTE/2);
+                mpE.seekTo(0);
                 mpE.start();
 
             }
