@@ -43,6 +43,10 @@ public class SynthesizerActivity extends AppCompatActivity {
         mpA = MediaPlayer.create(this, R.raw.scalea);
         mpB = MediaPlayer.create(this, R.raw.scaleb);
         mpFS = MediaPlayer.create(this, R.raw.scalefs);
+        mpGS = MediaPlayer.create(this, R.raw.scalegs);
+        mpCS = MediaPlayer.create(this, R.raw.scalecs);
+        mpDS = MediaPlayer.create(this, R.raw.scaleds);
+
 
 
         eButton.setOnClickListener(new View.OnClickListener() {
@@ -85,7 +89,28 @@ public class SynthesizerActivity extends AppCompatActivity {
         CH1Button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Log.i(TAG, "CH1Button Clicked");
-                mpE.seekTo(0);
+                //mpE.seekTo(0);
+                mpE.start();
+                delayPlaying (WHOLE_NOTE/2);
+                //mpFS.seekTo(0);
+                mpFS.start();
+                delayPlaying (WHOLE_NOTE/2);
+                //mpGS.seekTo(0);
+                mpGS.start();
+                delayPlaying (WHOLE_NOTE/2);
+               // mpA.seekTo(0);
+                mpA.start();
+                delayPlaying (WHOLE_NOTE/2);
+               // mpB.seekTo(0);
+                mpB.start();
+                delayPlaying (WHOLE_NOTE/2);
+                //mpCS.seekTo(0);
+                mpCS.start();
+                delayPlaying (WHOLE_NOTE/2);
+                //mpDS.seekTo(0);
+                mpDS.start();
+                delayPlaying (WHOLE_NOTE/2);
+                //mpE.seekTo(0);
                 mpE.start();
 
             }
@@ -94,8 +119,8 @@ public class SynthesizerActivity extends AppCompatActivity {
     private void delayPlaying(int delay){
         try {
             Thread.sleep(delay);
-        } catch (InterruptedException e) {
-            Log.e("SynthesizerActivity", "Audio playback interrupted");
+        } catch (InterruptedException i) {
+            Log.i("SynthesizerActivity", "Audio playback interrupted");
         }
     }
 }
